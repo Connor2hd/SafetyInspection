@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUV2WT3ViEU2pEMrc4X4DagAAAAACAAAAAAAQZgAAAAEAACAAAADY1075vYnCYdUWNJ5nkRcmc+VchIIlW7yzzjHvblI91QAAAAAOgAAAAAIAACAAAAAh4FzONgvJ43B/t1fQYeObM552lcCbXxcjqQ5zSw2184AAAAAP6/KV//lYZYIr+75J0ZJJkCUy5hsTn9PV0CxpXBR6a9rSyv4uYlKnLyk0kxHoDzTtvcX6XyfBDBDL5QN/wvOl4XU/1gjrdqYa7pMnGd9+Ev4kpLnR9/gSJL884KfbnDVsTsvcZT+BYsQcA16QJ6pr3leKpvXOhnTG6oqsj2CT7EAAAAArYMYZOeRMckjqU5ORXOww96viRbzXNnOZlsZmmpeFZSvOTMq6ObQXAhSH1XNWLTvDirLg1LttSZyJLBSRIVnt</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-SafetyAuth-20170330045914.mdf;Initial Catalog=aspnet-SafetyAuth-20170330045914;Integrated Security=True" />
+    <AzureDBConnectionStrings Include="Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+  </ItemGroup>
+</Project>
