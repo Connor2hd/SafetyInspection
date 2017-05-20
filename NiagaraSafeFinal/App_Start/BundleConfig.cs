@@ -12,6 +12,11 @@ namespace NiagaraSafeFinal
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkID=303951
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new StyleBundle("~/build/css").Include(
+                "~/build/css/custom.css",
+                "~/build/css/custom.min.css"
+                ));
+
             bundles.Add(new ScriptBundle("~/bundles/WebFormsJs").Include(
                             "~/Scripts/WebForms/WebForms.js",
                             "~/Scripts/WebForms/WebUIValidation.js",
