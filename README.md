@@ -5,7 +5,7 @@ The web application allows a user to create, edit and delete safety inspections.
 
 ---
 
-# Status
+### Status
 This project is mostly completed.  There are a couple things I would like to work on and improve but as for functionality it is pretty much where I want it.  I would like to play with some Javascript libraries for a chart solution, work on reporting and graphs a bit more.  There is some code I would like to make more efficient and tidy up a bit.
 
 ---
