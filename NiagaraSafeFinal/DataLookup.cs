@@ -14,7 +14,7 @@ namespace SafetyAuth
         public static string GetEmail(int ID)
         {
             //Create a new SQL connection
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //create connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -72,7 +72,7 @@ namespace SafetyAuth
         public static int DeleteActionsFromLab (int labID)
         {
             //Create a new SQL connection
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //create connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -99,7 +99,7 @@ namespace SafetyAuth
         public static int DeleteAreaFromLab(int labID)
         {
             //Create a new SQL connection
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //create connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -146,7 +146,7 @@ namespace SafetyAuth
             string name = "";
 
             //Declare a variable to store the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -180,7 +180,7 @@ namespace SafetyAuth
             string name = "";
 
             //Declare a variable to store the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -215,7 +215,7 @@ namespace SafetyAuth
             string techLast = splitValue[1];
 
             //Declare a variable to hold the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -242,7 +242,7 @@ namespace SafetyAuth
         public static int GetHazardID (string hazardDesc)
         {
             //Declare a variable to hold the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -269,7 +269,7 @@ namespace SafetyAuth
         public static int GetAreaID (string areaDesc)
         {
             //Declare a variable to hold the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -296,7 +296,7 @@ namespace SafetyAuth
         public static int GetLabID(string labTitle)
         {
             //Declare a variable to hold the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -326,7 +326,7 @@ namespace SafetyAuth
             string name = "";
 
             //Declare a variable to store the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -360,7 +360,7 @@ namespace SafetyAuth
             string name = "";
 
             //Declare a variable to store the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
@@ -391,7 +391,7 @@ namespace SafetyAuth
         public static int InsertAction(int inspectionID, int labID, int technicianID, int hazardID, int areaID, string hazardDesc, string actionDesc, DateTime dueDate, string hazardOther, string areaOther)
         {
             //Declare a variable to store the connection string
-            string connectionString = "Server=tcp:niagarasafety.database.windows.net,1433;Initial Catalog=NiagaraSafety;Persist Security Info=False;User ID=connor2hd;Password=Safety123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = DataLookup.GetConnectionStringByName("AzureServer");
 
             //Create a new SQL connection
             SqlConnection conn = new SqlConnection(connectionString);
