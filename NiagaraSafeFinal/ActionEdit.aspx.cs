@@ -18,19 +18,27 @@ namespace SafetyAuth
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Globals.role == "Tech" | Globals.role == "Admin") {
-                if (!IsPostBack)
-                {
-                    loadData();
-                    labDropdown();
-                    technicianDropdown();
-                    areaDropdown();
-                    hazardDropdown();
-                }
-            }
-            else
+            //if (Globals.role == "Tech" | Globals.role == "Admin") {
+            //    if (!IsPostBack)
+            //    {
+            //        loadData();
+            //        labDropdown();
+            //        technicianDropdown();
+            //        areaDropdown();
+            //        hazardDropdown();
+            //    }
+            //}
+            //else
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            if (!IsPostBack)
             {
-                Response.Redirect("Login.aspx");
+                loadData();
+                labDropdown();
+                technicianDropdown();
+                areaDropdown();
+                hazardDropdown();
             }
         }
 

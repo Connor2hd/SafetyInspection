@@ -223,7 +223,6 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Homepage.aspx" />
     <Content Include="InspectionAssigned.aspx" />
-    <Content Include="InspectionCreate.aspx" />
     <Content Include="InspectionCreateStatic.aspx" />
     <Content Include="InspectionEdit.aspx" />
     <Content Include="InspectionSchedule.aspx" />
@@ -470,13 +469,6 @@
     </Compile>
     <Compile Include="InspectionAssigned.aspx.designer.cs">
       <DependentUpon>InspectionAssigned.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="InspectionCreate.aspx.cs">
-      <DependentUpon>InspectionCreate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="InspectionCreate.aspx.designer.cs">
-      <DependentUpon>InspectionCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="InspectionCreateStatic.aspx.cs">
       <DependentUpon>InspectionCreateStatic.aspx</DependentUpon>

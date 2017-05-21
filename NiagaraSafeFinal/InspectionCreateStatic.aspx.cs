@@ -17,23 +17,33 @@ namespace SafetyAuth
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Globals.role == "Tech" | Globals.role == "Admin")
-            {
-                loadData();
+            //if (Globals.role == "Tech" | Globals.role == "Admin")
+            //{
+            //    loadData();
 
-                if (!IsPostBack)
-                {
-                    AreaDropdwon();
-                    HazardDropdown();
-                    LoadActions();
-                }
-                lblName1.Text = Globals.firstName + " " + Globals.lastName;
-                lblName2.Text = Globals.firstName + " " + Globals.lastName;
-            }
-            else
+            //    if (!IsPostBack)
+            //    {
+            //        AreaDropdwon();
+            //        HazardDropdown();
+            //        LoadActions();
+            //    }
+            //    lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            //    lblName2.Text = Globals.firstName + " " + Globals.lastName;
+            //}
+            //else
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            loadData();
+
+            if (!IsPostBack)
             {
-                Response.Redirect("Login.aspx");
-            }   
+                AreaDropdwon();
+                HazardDropdown();
+                LoadActions();
+            }
+            lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            lblName2.Text = Globals.firstName + " " + Globals.lastName;
         }
 
         protected void loadData()

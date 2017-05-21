@@ -16,30 +16,47 @@ namespace SafetyAuth
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Globals.role == "Tech" | Globals.role == "Admin")
-            {
-                if (!IsPostBack)
-                {
-                    ddlSchool.Items.Add("All");
-                    ddlSchool.Items.Add("Media");
-                    ddlSchool.Items.Add("Trades");
-                    ddlSchool.Items.Add("Technology");
+            //if (Globals.role == "Tech" | Globals.role == "Admin")
+            //{
+            //    if (!IsPostBack)
+            //    {
+            //        ddlSchool.Items.Add("All");
+            //        ddlSchool.Items.Add("Media");
+            //        ddlSchool.Items.Add("Trades");
+            //        ddlSchool.Items.Add("Technology");
 
-                    ddlStatus.Items.Add("All");
-                    ddlStatus.Items.Add("Upcoming");
-                    ddlStatus.Items.Add("Overdue");
-                    ddlStatus.Items.Add("Complete");
+            //        ddlStatus.Items.Add("All");
+            //        ddlStatus.Items.Add("Upcoming");
+            //        ddlStatus.Items.Add("Overdue");
+            //        ddlStatus.Items.Add("Complete");
 
-                    labDropdown();
-                    technicianDropdown();
-                }
-                lblName1.Text = Globals.firstName + " " + Globals.lastName;
-                lblName2.Text = Globals.firstName + " " + Globals.lastName;
-            }
-            else
+            //        labDropdown();
+            //        technicianDropdown();
+            //    }
+            //    lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            //    lblName2.Text = Globals.firstName + " " + Globals.lastName;
+            //}
+            //else
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            if (!IsPostBack)
             {
-                Response.Redirect("Login.aspx");
+                ddlSchool.Items.Add("All");
+                ddlSchool.Items.Add("Media");
+                ddlSchool.Items.Add("Trades");
+                ddlSchool.Items.Add("Technology");
+
+                ddlStatus.Items.Add("All");
+                ddlStatus.Items.Add("Upcoming");
+                ddlStatus.Items.Add("Overdue");
+                ddlStatus.Items.Add("Complete");
+
+                labDropdown();
+                technicianDropdown();
             }
+            lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            lblName2.Text = Globals.firstName + " " + Globals.lastName;
         }
 
         protected void labDropdown()

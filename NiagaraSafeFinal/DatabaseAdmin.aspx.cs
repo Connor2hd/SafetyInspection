@@ -18,26 +18,39 @@ namespace SafetyAuth
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Globals.role == "Admin")
-            {
-                if (!IsPostBack)
-                {
-                    ddlSchool.Items.Add("Media");
-                    ddlSchool.Items.Add("Trades");
-                    ddlSchool.Items.Add("Technology");
+            //if (Globals.role == "Admin")
+            //{
+            //    if (!IsPostBack)
+            //    {
+            //        ddlSchool.Items.Add("Media");
+            //        ddlSchool.Items.Add("Trades");
+            //        ddlSchool.Items.Add("Technology");
 
-                    LabDropdown();
-                    TechnicianDropdown();
-                    AreaDropdwon();
-                    HazardDropdown();
-                }
-                lblName1.Text = Globals.firstName + " " + Globals.lastName;
-                lblName2.Text = Globals.firstName + " " + Globals.lastName;
-            }
-            else
+            //        LabDropdown();
+            //        TechnicianDropdown();
+            //        AreaDropdwon();
+            //        HazardDropdown();
+            //    }
+            //    lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            //    lblName2.Text = Globals.firstName + " " + Globals.lastName;
+            //}
+            //else
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            if (!IsPostBack)
             {
-                Response.Redirect("Login.aspx");
+                ddlSchool.Items.Add("Media");
+                ddlSchool.Items.Add("Trades");
+                ddlSchool.Items.Add("Technology");
+
+                LabDropdown();
+                TechnicianDropdown();
+                AreaDropdwon();
+                HazardDropdown();
             }
+            lblName1.Text = Globals.firstName + " " + Globals.lastName;
+            lblName2.Text = Globals.firstName + " " + Globals.lastName;
         }
 
         protected void LabDropdown()

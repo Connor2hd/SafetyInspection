@@ -17,16 +17,20 @@ namespace SafetyAuth
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Globals.role == "Admin")
+            //if (Globals.role == "Admin")
+            //{
+            //    if (!IsPostBack)
+            //    {
+            //        LoadData();
+            //    }
+            //}
+            //else
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            if (!IsPostBack)
             {
-                if (!IsPostBack)
-                {
-                    LoadData();
-                }
-            }
-            else
-            {
-                Response.Redirect("Login.aspx");
+                LoadData();
             }
         }
 
