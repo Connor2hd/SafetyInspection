@@ -222,6 +222,7 @@
     <None Include="Properties\PublishProfiles\ConnorMackaySafety.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Homepage.aspx" />
+    <Content Include="images\img.jpg" />
     <Content Include="InspectionAssigned.aspx" />
     <Content Include="InspectionCreateStatic.aspx" />
     <Content Include="InspectionEdit.aspx" />
@@ -540,7 +541,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="build\" />
-    <Folder Include="images\" />
     <Folder Include="src\" />
     <Folder Include="vendors\" />
   </ItemGroup>

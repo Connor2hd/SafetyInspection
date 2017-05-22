@@ -82,7 +82,7 @@ namespace SafetyAuth
                     ? DateTime.MaxValue
                     : reader.GetDateTime(7);
 
-                bool isComplete = reader.GetBoolean(9);
+                bool isComplete = reader.GetBoolean(8);
 
                 //Determine inspection status
                 string status = "";
