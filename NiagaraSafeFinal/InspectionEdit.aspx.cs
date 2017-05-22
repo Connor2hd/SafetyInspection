@@ -253,81 +253,81 @@ namespace SafetyAuth
             MessageBoxImage icon = MessageBoxImage.Warning;
             MessageBoxResult result = MessageBox.Show(messageBoxText, caption, button, icon);
 
-            if (result == MessageBoxResult.Yes)
-            {
-                //The initial inspectionID value
-                int initialInspectionID = Convert.ToInt32(Request.QueryString["inspectionID"]);
+            //if (result == MessageBoxResult.Yes)
+            //{
+            //    //The initial inspectionID value
+            //    int initialInspectionID = Convert.ToInt32(Request.QueryString["inspectionID"]);
 
-                //Get values from textboxes and store them in variables for later execution in update query
-                int inspectionID = Convert.ToInt32(txtInspectionID.Text);
-                DateTime assignedDate = calDateAssigned.SelectedDate;
-                DateTime canStartDate = calDateCanStart.SelectedDate;
-                DateTime dueDate = calDueDate.SelectedDate;
-                DateTime startDate = calStartDate.SelectedDate;
-                DateTime finishDate = calFinishDate.SelectedDate;
-                int isCompleteBit = 1;
+            //    //Get values from textboxes and store them in variables for later execution in update query
+            //    int inspectionID = Convert.ToInt32(txtInspectionID.Text);
+            //    DateTime assignedDate = calDateAssigned.SelectedDate;
+            //    DateTime canStartDate = calDateCanStart.SelectedDate;
+            //    DateTime dueDate = calDueDate.SelectedDate;
+            //    DateTime startDate = calStartDate.SelectedDate;
+            //    DateTime finishDate = calFinishDate.SelectedDate;
+            //    int isCompleteBit = 1;
 
-                //Get the technician ID from the dropdown item
-                string technician = ddlTechnician.SelectedItem.Text;
-                var splitValueTech = technician.Split(' ');
-                int technicianID = Convert.ToInt16(splitValueTech[3]);
+            //    //Get the technician ID from the dropdown item
+            //    string technician = ddlTechnician.SelectedItem.Text;
+            //    var splitValueTech = technician.Split(' ');
+            //    int technicianID = Convert.ToInt16(splitValueTech[3]);
 
-                //Get the lab ID from the dropdown item
-                string room = ddlRoom.SelectedItem.Text;
-                var splitValueLab = room.Split(' ');
-                int labID = Convert.ToInt16(splitValueLab[0]);
+            //    //Get the lab ID from the dropdown item
+            //    string room = ddlRoom.SelectedItem.Text;
+            //    var splitValueLab = room.Split(' ');
+            //    int labID = Convert.ToInt16(splitValueLab[0]);
 
-                if (ddlInspectionStatus.SelectedItem.Value == "Complete")
-                {
-                    isCompleteBit = 1;
-                }
-                if (ddlInspectionStatus.SelectedItem.Value == "Incomplete")
-                {
-                    isCompleteBit = 0;
-                }
+            //    if (ddlInspectionStatus.SelectedItem.Value == "Complete")
+            //    {
+            //        isCompleteBit = 1;
+            //    }
+            //    if (ddlInspectionStatus.SelectedItem.Value == "Incomplete")
+            //    {
+            //        isCompleteBit = 0;
+            //    }
 
-                //Create a new SQL connection
-                SqlConnection conn = new SqlConnection(connectionString);
+            //    //Create a new SQL connection
+            //    SqlConnection conn = new SqlConnection(connectionString);
 
-                //Create a new SQL command
-                SqlCommand comm = conn.CreateCommand();
+            //    //Create a new SQL command
+            //    SqlCommand comm = conn.CreateCommand();
 
-                //Assign the query to the command
-                comm.CommandText = "UPDATE Inspection SET TechnicianID=@technicianID, labID=@labID, AssignedDate=@assignedDate, CanStartDate=@canStartDate, DueDate=@dueDate, StartDate=@startDate, FinishDate=@finishDate, IsComplete=@isCompleteBit WHERE ID = @inspectionID";
+            //    //Assign the query to the command
+            //    comm.CommandText = "UPDATE Inspection SET TechnicianID=@technicianID, labID=@labID, AssignedDate=@assignedDate, CanStartDate=@canStartDate, DueDate=@dueDate, StartDate=@startDate, FinishDate=@finishDate, IsComplete=@isCompleteBit WHERE ID = @inspectionID";
 
-                comm.Parameters.AddWithValue("@technicianID", technicianID);
-                comm.Parameters.AddWithValue("@labID", labID);
-                comm.Parameters.AddWithValue("@assignedDate", assignedDate);
-                comm.Parameters.AddWithValue("@canStartDate", canStartDate);
-                comm.Parameters.AddWithValue("@dueDate", dueDate);
-                comm.Parameters.AddWithValue("@startDate", startDate);
-                comm.Parameters.AddWithValue("@finishDate", finishDate);
-                comm.Parameters.AddWithValue("@isCompleteBit", isCompleteBit);
-                comm.Parameters.AddWithValue("@inspectionID", inspectionID);
+            //    comm.Parameters.AddWithValue("@technicianID", technicianID);
+            //    comm.Parameters.AddWithValue("@labID", labID);
+            //    comm.Parameters.AddWithValue("@assignedDate", assignedDate);
+            //    comm.Parameters.AddWithValue("@canStartDate", canStartDate);
+            //    comm.Parameters.AddWithValue("@dueDate", dueDate);
+            //    comm.Parameters.AddWithValue("@startDate", startDate);
+            //    comm.Parameters.AddWithValue("@finishDate", finishDate);
+            //    comm.Parameters.AddWithValue("@isCompleteBit", isCompleteBit);
+            //    comm.Parameters.AddWithValue("@inspectionID", inspectionID);
 
-                //Open the connection
-                conn.Open();
+            //    //Open the connection
+            //    conn.Open();
 
-                //Execute the command
-                int rows = comm.ExecuteNonQuery();
+            //    //Execute the command
+            //    int rows = comm.ExecuteNonQuery();
 
-                //Close the connection
-                conn.Close();
+            //    //Close the connection
+            //    conn.Close();
 
-                //Shows feedback based on the success of the transaction
-                if (rows > 0)
-                {
-                    MessageBox.Show("Inspection #" + inspectionID + " has been updated.");
-                }
-                else
-                {
-                    MessageBox.Show("Error. Inspection #" + inspectionID + " has not been updated.");
-                }
-            }
-            if (result == MessageBoxResult.No | result == MessageBoxResult.Cancel)
-            {
-                MessageBox.Show("No Action Taken");
-            }
+            //    //Shows feedback based on the success of the transaction
+            //    if (rows > 0)
+            //    {
+            //        MessageBox.Show("Inspection #" + inspectionID + " has been updated.");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Error. Inspection #" + inspectionID + " has not been updated.");
+            //    }
+            //}
+            //if (result == MessageBoxResult.No | result == MessageBoxResult.Cancel)
+            //{
+            //    MessageBox.Show("No Action Taken");
+            //}
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
