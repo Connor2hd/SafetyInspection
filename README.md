@@ -1,9 +1,12 @@
-# Warning
-This project is not live.  I had it running on a local development environment and still need to make some alterations in order to have it viewable easily over the web.  I will have a demo hosted on Azure online very soon.
-
 # NiagaraSafety
-This project was created by myself for a class at the Computer Programmer Analyst program at Niagara College.  This was the final project in year two
-and mostly focused on building upon C# and Asp.Net skills we learned in class the following semester.  
+This project was created by myself for a class at the Computer Programmer Analyst program at Niagara College.  This was the final project in year two and mostly focused on building upon C# and Asp.Net skills we learned in class the following semester.  The project is hosted using Azure App Service and can be accessed here.  http://safetyinspection.azurewebsites.net/Homepage
+
+The web application allows a user to create, edit and delete safety inspections.  The inspections take a variety of information and store it in a database.  There is quite a variety of information that can be manipulated.
+
+---
+
+### Status
+This project is mostly completed.  There are a couple things I would like to work on and improve but as for functionality it is pretty much where I want it.  I would like to play with some Javascript libraries for a chart solution, work on reporting and graphs a bit more.  There is some code I would like to make more efficient and tidy up a bit.
 
 ---
 
@@ -12,7 +15,7 @@ The websites design is a modified version of the open source [Gentelella Theme](
 Bootstrap 3 alongside a variety of jQuery plugins.  Overall the design is very clean and simple, making it ideal to use in this quick
 project.
 
-The web application is built using ASP.NET Webforms within Visual Studio 2015.  All the code behind the application is C#.  
+The web application is built using ASP.NET Webforms within Visual Studio.  All the code behind the application is C#.  
 
 The web application connects to an Azure SQL Server using ADO.NET.
 
