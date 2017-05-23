@@ -1,5 +1,5 @@
 # NiagaraSafety
-This project was created by myself for a class at the Computer Programmer Analyst program at Niagara College.  This was the final project in year two and mostly focused on building upon C# and Asp.Net skills we learned in class the following semester.  The project is hosted using Azure App Service and can be accessed here.  http://safetyinspection.azurewebsites.net/Homepage
+This project was created by myself for a class at the Computer Programmer Analyst program at Niagara College.  This was the final project in year two and mostly focused on building upon C# and Asp.Net skills we learned in class the following semester.
 
 The web application allows a user to create, edit and delete safety inspections.  The inspections take a variety of information and store it in a database.  There is quite a variety of information that can be manipulated.
 
