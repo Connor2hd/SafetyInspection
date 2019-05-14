@@ -1,4 +1,6 @@
 # NiagaraSafety
+# Update May 2019: I just took a look at this for the first time since college and I noticed a lot of code that could have been written better.  I'm going to keep the repo public but it is not a good indication of my current skill level.
+
 This project was created by myself for a class at the Computer Programmer Analyst program at Niagara College.  This was the final project in year two and mostly focused on building upon C# and Asp.Net skills we learned in class the following semester.
 
 The web application allows a user to create, edit and delete safety inspections.  The inspections take a variety of information and store it in a database.  There is quite a variety of information that can be manipulated.
